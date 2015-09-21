@@ -12,7 +12,7 @@
       display: inline-block;
       margin-top: 200px;
       font-weight: bold;
-      font-size: 60pt;
+      font-size: 50pt;
       font-family: Arial, sans-serif;
       text-decoration: none;
       color: black;
@@ -28,9 +28,9 @@
   var calculate = function(){
           var start = moment("2015-07-02"),
           end = moment(),
-		  diff = end - start,
+		  diff = end.diff(start),
 		  duration = moment.duration(diff);
-      var answer = duration.years() + " Years " + duration.days() + " Days " + duration.hours() + " Hours " + duration.minutes() + " Minutes " + duration.seconds() + " Seconds";
+      var answer = duration.years() + " Years " + duration.months() + " Months " +  duration.days() + " Days " + duration.hours() + " Hours " + duration.minutes() + " Minutes " + duration.seconds() + " Seconds";
       var elem = document.getElementById('answer');
       elem.innerHTML = answer;
   }
