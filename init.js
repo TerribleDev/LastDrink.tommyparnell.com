@@ -1,5 +1,5 @@
 var calculate = function(){
-        var start = moment("2015-07-02"),
+        var start = moment("2016-06-30"),
         end = moment(),
     diff = end.diff(start),
     duration = moment.duration(diff);
